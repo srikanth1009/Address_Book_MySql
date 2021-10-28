@@ -88,4 +88,26 @@ Records: 4  Duplicates: 0  Warnings: 0
 | Ajeeth    | V        | sirinagara | chennai | Tamilnadu     | 3021402 |   777777777 | ajith@gmail.com    |
 +-----------+----------+------------+---------+---------------+---------+-------------+--------------------+
 4 rows in set (0.0010 sec)
+===========================================================
+--> UC4 editing the existing contact by their firstname
+===========================================================
+
+ MySQL  localhost:3306 ssl  addressbookservice  SQL > update AddressBook set  lastName='Yadav' where firstname='Ajeeth';
+Query OK, 1 row affected (0.1630 sec)
+
+Rows matched: 1  Changed: 1  Warnings: 0
+ MySQL  localhost:3306 ssl  addressbookservice  SQL > update addressbook set phoneNumber=9182741330 where firstname='Srikanth';
+Query OK, 1 row affected (0.2566 sec)
+
+Rows matched: 1  Changed: 1  Warnings: 0
+ MySQL  localhost:3306 ssl  addressbookservice  SQL > select * from AddressBook;
++-----------+----------+------------+---------+---------------+---------+-------------+--------------------+
+| firstName | lastName | address    | city    | state         | zip     | phoneNumber | email              |
++-----------+----------+------------+---------+---------------+---------+-------------+--------------------+
+| Srikanth  | Reddy    | Palempadu  | Nellore | AndhraPradesh |  524131 |  9182741330 | srikanth@gmail.com |
+| Shivam    | Shakya   | Ramapura   | Ethawa  | Bihar         |  561210 |   999999999 | shivam@gmail.com   |
+| Deepak    | Yadav    | Alambagh   | Lucknow | Uttar Pradesh |  520102 |   888888888 | deepak@gmail.com   |
+| Ajeeth    | Yadav    | sirinagara | chennai | Tamilnadu     | 3021402 |   777777777 | ajith@gmail.com    |
++-----------+----------+------------+---------+---------------+---------+-------------+--------------------+
+4 rows in set (0.0008 sec)
  
