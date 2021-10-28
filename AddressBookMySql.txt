@@ -258,5 +258,17 @@ Rows matched: 2  Changed: 2  Warnings: 0
 2 rows in set (0.0014 sec)
  MySQL  localhost:3306 ssl  addressbookservice  SQL > select * from AddressBook where contacttype='Friends';
 Empty set (0.0010 sec)
+========================================================
+-- UC10 ability to get count of contacts by contacttype
+========================================================
+
+ MySQL  localhost:3306 ssl  addressbookservice  SQL > select count(firstname) from AddressBook where contactType='family';
++------------------+
+| count(firstname) |
++------------------+
+|                2 |
++------------------+
+1 row in set (0.0007 sec)
+ MySQL  localhost:3306 ssl  addressbookservice  SQL >
 
  
