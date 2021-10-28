@@ -137,4 +137,30 @@ MySQL  localhost:3306 ssl  addressbookservice  SQL > select * from AddressBook w
 +-----------+----------+-----------+---------+---------------+--------+-------------+--------------------+
 1 row in set (0.0011 sec)
 
+=============================================
+-- UC7 size of addressbook by city and state
+=============================================
+
+ MySQL  localhost:3306 ssl  addressbookservice  SQL > select count(firstname) from AddressBook where city = 'Nellore';
++------------------+
+| count(firstname) |
++------------------+
+|                1 |
++------------------+
+1 row in set (0.0437 sec)
+ MySQL  localhost:3306 ssl  addressbookservice  SQL > select count(firstName) from AddressBook where state = 'Bihar';
++------------------+
+| count(firstName) |
++------------------+
+|                0 |
++------------------+
+1 row in set (0.0016 sec)
+ MySQL  localhost:3306 ssl  addressbookservice  SQL > select count(firstname) from AddressBook where city='chennai';
++------------------+
+| count(firstname) |
++------------------+
+|                1 |
++------------------+
+1 row in set (0.0008 sec)
+
  
