@@ -162,5 +162,42 @@ MySQL  localhost:3306 ssl  addressbookservice  SQL > select * from AddressBook w
 |                1 |
 +------------------+
 1 row in set (0.0008 sec)
+=====================================================
+-- UC8 soriting the name alphbetically for given city
+=====================================================
+
+ MySQL  localhost:3306 ssl  addressbookservice  SQL > insert into AddressBook(firstname,lastname,address,city,state,zip,phoneNumber,email)
+                                                   -> values ('Abhi','V','coorg','Chikkamagalur','Karnatak',50102,9874561023,'abhi@gmail.com');
+Query OK, 1 row affected (0.1139 sec)
+ MySQL  localhost:3306 ssl  addressbookservice  SQL > insert into AddressBook(firstname,lastname,address,city,state,zip,phoneNumber,email)
+                                                   -> values('Vijay','Mishra','VaidyaPatti','Pratpgarh','Uttar Pradesh',851026,9874563201,'Vijay@gmail.com');
+Query OK, 1 row affected (0.5745 sec)
+ MySQL  localhost:3306 ssl  addressbookservice  SQL > insert into AddressBook(firstname,lastname,address,city,state,zip,phoneNumber,email)
+                                                   -> values('uday','reddy','gauribidanur','benagaluru','karnataka',652142,8520147963,'Uday@gmail.com');
+Query OK, 1 row affected (0.4658 sec)
+ MySQL  localhost:3306 ssl  addressbookservice  SQL > select * from AddressBook;
++-----------+----------+--------------+---------------+---------------+---------+-------------+--------------------+
+| firstName | lastName | address      | city          | state         | zip     | phoneNumber | email              |
++-----------+----------+--------------+---------------+---------------+---------+-------------+--------------------+
+| Srikanth  | Reddy    | Palempadu    | Nellore       | AndhraPradesh |  524131 |  9182741330 | srikanth@gmail.com |
+| Deepak    | Yadav    | Alambagh     | Lucknow       | Uttar Pradesh |  520102 |   888888888 | deepak@gmail.com   |
+| Ajeeth    | Yadav    | sirinagara   | chennai       | Tamilnadu     | 3021402 |   777777777 | ajith@gmail.com    |
+| Abhi      | V        | coorg        | Chikkamagalur | Karnatak      |   50102 |  9874561023 | abhi@gmail.com     |
+| Vijay     | Mishra   | VaidyaPatti  | Pratpgarh     | Uttar Pradesh |  851026 |  9874563201 | Vijay@gmail.com    |
+| uday      | reddy    | gauribidanur | benagaluru    | karnataka     |  652142 |  8520147963 | Uday@gmail.com     |
++-----------+----------+--------------+---------------+---------------+---------+-------------+--------------------+
+6 rows in set (0.0144 sec)
+ MySQL  localhost:3306 ssl  addressbookservice  SQL > select firstname,city from AddressBook order by city;
++-----------+---------------+
+| firstname | city          |
++-----------+---------------+
+| uday      | benagaluru    |
+| Ajeeth    | chennai       |
+| Abhi      | Chikkamagalur |
+| Deepak    | Lucknow       |
+| Srikanth  | Nellore       |
+| Vijay     | Pratpgarh     |
++-----------+---------------+
+6 rows in set (0.0266 sec)
 
  
