@@ -125,5 +125,16 @@ Query OK, 1 row affected (0.1160 sec)
 | Ajeeth    | Yadav    | sirinagara | chennai | Tamilnadu     | 3021402 |   777777777 | ajith@gmail.com    |
 +-----------+----------+------------+---------+---------------+---------+-------------+--------------------+
 3 rows in set (0.0921 sec)
+===========================================================
+--> UC6 retrieving the contact by city or state
+===========================================================
+ 
+MySQL  localhost:3306 ssl  addressbookservice  SQL > select * from AddressBook where city = 'Nellore' or State='AndhraPradesh';
++-----------+----------+-----------+---------+---------------+--------+-------------+--------------------+
+| firstName | lastName | address   | city    | state         | zip    | phoneNumber | email              |
++-----------+----------+-----------+---------+---------------+--------+-------------+--------------------+
+| Srikanth  | Reddy    | Palempadu | Nellore | AndhraPradesh | 524131 |  9182741330 | srikanth@gmail.com |
++-----------+----------+-----------+---------+---------------+--------+-------------+--------------------+
+1 row in set (0.0011 sec)
 
  
