@@ -110,4 +110,20 @@ Rows matched: 1  Changed: 1  Warnings: 0
 | Ajeeth    | Yadav    | sirinagara | chennai | Tamilnadu     | 3021402 |   777777777 | ajith@gmail.com    |
 +-----------+----------+------------+---------+---------------+---------+-------------+--------------------+
 4 rows in set (0.0008 sec)
+===========================================================
+-- UC5 -deleting the contact by their lastname
+===========================================================
+
+ MySQL  localhost:3306 ssl  addressbookservice  SQL > delete from addressBook where lastname='Shakya';
+Query OK, 1 row affected (0.1160 sec)
+ MySQL  localhost:3306 ssl  addressbookservice  SQL > select * from AddressBook;
++-----------+----------+------------+---------+---------------+---------+-------------+--------------------+
+| firstName | lastName | address    | city    | state         | zip     | phoneNumber | email              |
++-----------+----------+------------+---------+---------------+---------+-------------+--------------------+
+| Srikanth  | Reddy    | Palempadu  | Nellore | AndhraPradesh |  524131 |  9182741330 | srikanth@gmail.com |
+| Deepak    | Yadav    | Alambagh   | Lucknow | Uttar Pradesh |  520102 |   888888888 | deepak@gmail.com   |
+| Ajeeth    | Yadav    | sirinagara | chennai | Tamilnadu     | 3021402 |   777777777 | ajith@gmail.com    |
++-----------+----------+------------+---------+---------------+---------+-------------+--------------------+
+3 rows in set (0.0921 sec)
+
  
